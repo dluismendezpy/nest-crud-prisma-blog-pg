@@ -1,15 +1,14 @@
 version: '3.8'
 services:
-
   postgres:
     image: postgres:13.5
     restart: always
     environment:
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=sql
+      - POSTGRES_USER=${POSTGRESQL_USER}
+      - POSTGRES_PASSWORD=${POSTGRESQL_PASSWORD}
     volumes:
       - postgres:/var/lib/postgresql/data
     ports:
-      - '5432:5432'
+      - '${POSTGRESQL_PORT}:${POSTGRESQL_PORT}'
 volumes:
   postgres:
