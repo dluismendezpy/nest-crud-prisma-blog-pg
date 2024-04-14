@@ -9,6 +9,6 @@ services:
     volumes:
       - postgres:/var/lib/postgresql/data
     ports:
-      - '${POSTGRESQL_PORT}:${POSTGRESQL_PORT}'
+      - '${POSTGRESQL_PORT}:${POSTGRESQL_PORT_DEFAULT}'
 volumes:
   postgres:
